@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galería de Fotos</title>
+<style>
+    /* Estilos CSS */
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('imagenes/fondo4.jpg'); /* Ruta de la imagen de fondo */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .gallery-container {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0); /* Color de fondo del contenedor de la galería */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra */
+    }
+
+    .gallery {
+        position: relative; /* Para que los botones de navegación se puedan posicionar correctamente */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px;
+    }
+    
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        z-index: 1;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #333;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+  .back-button {
+    position: absolute;
+    top: 340px; /* Ajusta la posición vertical si es necesario */
+    right: 1250px; /* Ajusta la posición horizontal */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">Volver</button>
+    <div class="gallery-container">
+        <div class="gallery">
+            <button class="prev" onclick="plusSlides(-1)">&#10094; </button>
+            <!-- Aquí añade las imágenes con la etiqueta <img> -->
+            <img src="imagenes/civic1.jpg" alt="Imagen 1">
+            <img src="imagenes/civic2.jpg" alt="Imagen 2">
+            <img src="imagenes/civic3.jpg" alt="Imagen 3">
+            <img src="imagenes/civic4.jpg" alt="Imagen 4">
+            <img src="imagenes/civic5.jpg" alt="Imagen 5">
+            <img src="imagenes/civic6.jpg" alt="Imagen 6">
+            <img src="imagenes/civic7.jpg" alt="Imagen 7">
+            <!-- Añade más imágenes según sea necesario -->
+            <button class="next" onclick="plusSlides(1)"> &#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.querySelectorAll('.gallery img');
+            
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slides[slideIndex - 1].style.display = 'block';
+        }
+
+        showSlides(slideIndex);
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

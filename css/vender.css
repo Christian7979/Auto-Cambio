@@ -1,0 +1,129 @@
+/* Estilos base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../imagenes/fondo4.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000; /* Texto negro */
+}
+h2 {
+    color: #fff;
+}
+/* Estilos para el encabezado */
+header {
+    background: rgb(64,103,255);
+    background: linear-gradient(0deg, rgba(64,103,255,1) 22%, rgba(88,160,255,1) 49%, rgba(8,146,255,1) 100%);
+    padding: 4px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 22px;
+    z-index: 999; /* Asegura que el header esté por encima de otros elementos */
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #ffff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* Estilos para la sección de "Vender tu auto" */
+.vender-coche {
+    padding-top: 60px; /* Ajuste para dejar espacio para el encabezado fijo */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilos para el contenido informativo */
+.info-coche {
+    background-color: #; /* Cambia el color de fondo */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff; /* Cambia el color del texto */
+}
+/* Estilos para el formulario */
+.formulario {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ajustar el tamaño del borde al tamaño total */
+}
+
+/* Estilos para las etiquetas */
+label {
+    font-weight: bold;
+}
+
+/* Estilos para los mensajes de error */
+.error {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+/* Estilos para el botón de enviar */
+button[type="button"] {
+    background-color: #f5821f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="button"]:hover {
+    background-color: #d45b00;
+}

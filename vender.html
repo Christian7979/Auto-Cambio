@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vender tu auto</title>
+    <link rel="stylesheet" href="css/vender.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="autos.html">Autos</a></li>
+                <li><a href="motos.html">Motos</a></li>
+                <li><a href="vender.html" class="active">Vender</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="vender-coche">
+        <div class="container">
+            <div class="info-coche">
+                <h2>Vende tu auto</h2>
+                <p>En nuestra plataforma, ofrecemos una manera fácil y segura de vender tu coche. Si estás interesado en vender tu vehículo, ¡estás en el lugar correcto!</p>
+                <p>Nuestro proceso de venta es sencillo y rápido. Solo tienes que seguir estos pasos:</p>
+                <ol>
+                    <li>Completa el formulario de información del coche a continuación.</li>
+                    <li>Nuestro equipo revisará la información proporcionada y te contactará para discutir los detalles de la venta.</li>
+                    <li>Una vez acordados los términos, gestionaremos la venta de tu coche.</li>
+                </ol>
+            </div>
+            <div class="formulario">
+                <h3>Formulario de información del coche</h3>
+                <form id="formulario">
+                    <!-- Contenido del formulario -->
+                    <div class="form-group">
+                        <label for="marca">Marca:</label>
+                        <input type="text" id="marca" name="marca" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modelo">Modelo:</label>
+                        <input type="text" id="modelo" name="modelo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="anio">Año:</label>
+                        <input type="number" id="anio" name="anio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="kilometraje">Kilometraje:</label>
+                        <input type="number" id="kilometraje" name="kilometraje" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="precio">Precio:</label>
+                        <input type="number" id="precio" name="precio" required>
+                    </div>
+                    <button type="button" onclick="validarFormulario()">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function validarFormulario() {
+            var formulario = document.getElementById('formulario');
+            var inputs = formulario.querySelectorAll('input');
+            var errores = false;
+            
+            // Limpiar errores
+            formulario.querySelectorAll('.error').forEach(function(error) {
+                error.textContent = '';
+            });
+
+            // Validar campos
+            inputs.forEach(function(input) {
+                if (!input.validity.valid) {
+                    var errorId = 'error-' + input.id;
+                    var errorDiv = document.getElementById(errorId);
+                    errorDiv.textContent = 'Por favor, completa este campo.';
+                    errores = true;
+                }
+            });
+
+            // Si no hay errores, enviar formulario
+            if (!errores) {
+                formulario.submit();
+            }
+        }
+    </script>
+
+</body>
+</html>

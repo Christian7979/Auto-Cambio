@@ -1,0 +1,130 @@
+/* Estilos base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../imagenes/fondo2.2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000; /* Color negro para el texto */
+    background-color: rgba(44, 44, 44, 0.7); /* Fondo semi-transparente */
+}
+
+.lemon-regular {
+    font-family: "Lemon", serif;
+    font-weight: 200; /* Cambiado a 900 para hacerla más grande */
+    font-style: normal;
+    font-size: 58px; /* Tamaño de la fuente aumentado */
+    margin-top: center; /* Desplazamiento hacia arriba de 30px */
+    color: #DCDCDC ;
+}
+
+h1 {
+    color: #ffff; /* Color naranja para los encabezados h1 */
+}
+
+h2 {
+    color: #ffff; /* Color naranja para los encabezados h2 */
+}
+
+header {
+    background-color: rgba(255, 212, 152, 0); /* Encabezado completamente transparente */
+    padding: 4px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 22px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido del menú a la derecha */
+    text-align: right; /* Alinea el texto del menú a la derecha */
+    width: 90%; /* Ajusta hacia el lado derecho del contenedor del menú */
+    margin: 0 auto; /* Centra el contenedor del menú horizontalmente */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap; /* Evita que los elementos del menú se envuelvan a la siguiente línea */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px; /* Espacio entre elementos del menú */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento del menú */
+}
+
+nav ul li a {
+    color: #ffff; /* Color negro para el texto del menú */
+    text-decoration: none;
+    display: inline-block; /* Convertir el enlace en un bloque en línea */
+    padding: 10px; /* Ajustar el relleno según sea necesario */
+    position: relative; /* Establecer posición relativa para agregar la línea inferior */
+    font-weight: 600;
+    box-shadow: 5px;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #f5821f; /* Línea naranja debajo del enlace al pasar el cursor */
+}
+
+.contacto {
+    background-color: #f5821f; /* Color naranja para el cuadro */
+    padding: 5px 10px; /* Ajusta el padding según sea necesario */
+    border-radius: 5px; /* Borde redondeado */
+    margin-left: auto; /* Mueve el elemento hacia la derecha */
+}
+
+.contacto a {
+    color: #fff; /* Color blanco para el texto */
+    text-decoration: none;
+}
+
+.contacto:hover { /* Estilo aplicado cuando se pasa el cursor sobre el enlace */
+    background-color: #f5821f; /* Color naranja para el cuadro */
+}
+
+.menu {
+    background-color: #fff; /* Color blanco para el menú */
+    color: #f5821f; /* Color naranja para el texto del menú */
+    padding: 10px 15px; /* Ajusta el padding según sea necesario */
+    border-radius: 5px; /* Borde redondeado */
+    text-decoration: none;
+}
+
+.menu:hover {
+    background-color: #f5821f; /* Color naranja para el menú al pasar el cursor */
+    color: #fff; /* Color blanco para el texto del menú al pasar el cursor */
+}
+.contact {
+    background-color: #f5821f; /* Color blanco para el menú */
+    color: #ffff; /* Color naranja para el texto del menú */
+    padding: 10px 15px; /* Ajusta el padding según sea necesario */
+    border-radius: 5px; /* Borde redondeado */
+    text-decoration: none;
+    margin-left: 20px; /* Mueve el botón hacia la derecha 20px */
+    display: inline-block;
+
+}
+
+.contact:hover {
+    background-color: #fff; /* Color naranja para el menú al pasar el cursor */
+    color: #f5821f; /* Color blanco para el texto del menú al pasar el cursor */
+}
+main {
+    padding-top: 80px; /* Ajusta el valor según la altura de tu barra de navegación */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+}
